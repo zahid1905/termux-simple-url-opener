@@ -1,0 +1,36 @@
+#!/bin/bash
+
+clear
+
+url=$1
+
+echo "Adaptado por Zahid1905"
+echo "1: Descargar audio de YouTube (mejor calidad)[yt-dlp]"
+echo "2: Descargar audio de YouTube (mp3)[yt-dlp]"
+echo "3: Descargar video de YouTube (mejor calidad)[yt-dlp]"
+echo "4: Descargar video de YouTube (1080p)[yt-dlp]"
+echo "5: Descargar otros archivos [wget]"
+
+yt_command='-no-mtime -o ~/storage/downloads/%(title)s.%(ext)s'
+read option
+
+if [ "$option" -eq "1" ]
+then
+    yt-dlp $url $yt_command -f "bestaudio" -x --audio-quality 0 --audio-format "best"
+
+elif [ "$option" -eq "2" ]
+then
+    yt-dlp $url $yt_command -f "bestaudio" -x --audio-quality 0 --audio-format "mp3"
+
+elif [ "$option" -eq "3" ]
+then
+    yt-dlp $url $yt_command -f "bestvideo+bestaudio/best"
+
+elif [ "$option" -eq "4" ]
+then
+    yt-dlp $url $yt_command -S "res:1080"
+
+elif [ "$option" -eq "5" ]
+then
+    wget -P "~/storage/downloads/" $url
+fi
