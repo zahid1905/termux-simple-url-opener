@@ -10,7 +10,7 @@ termux-setup-storage
 sleep 5
  
 echo -e "Instalando Python\n"
-pkg install python ffmpeg
+pkg install python ffmpeg --no-install-recommends
 
 echo -e "Instalando yt-dlp\n"
 pip install yt-dlp
