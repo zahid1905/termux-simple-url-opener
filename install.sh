@@ -10,7 +10,7 @@ termux-setup-storage
 sleep 5
  
 echo -e "Instalando Python\n"
-pkg install python ffmpeg clang --no-install-recommends
+pkg install python python-pip ffmpeg --no-install-recommends
 
 echo -e "Actualizando pip\n"
 pip install pip --upgrade
@@ -22,10 +22,10 @@ echo -e "Creando el folder bin\n"
 mkdir ~/bin
  
 echo -e "Descargando e installando termux-url-opener\n"
-wget --no-check-certificate "https://raw.githubusercontent.com/zahid1905/termux-simple-url-opener/main/termux-url-opener" -O ~/bin/termux-url-opener
+curl "https://raw.githubusercontent.com/zahid1905/termux-simple-url-opener/main/termux-url-opener" -o ~/bin/termux-url-opener
 chmod +x ~/bin/termux-url-opener
 
 echo -e "\n"
 echo -e "\n"
-echo -e "Los archivos descargados pueden ser encontrados en la carpeta descargas\n"
+echo -e "Los archivos descargados pueden ser encontrados en la carpeta TermuxDownloads\n"
 echo -e "\n"
