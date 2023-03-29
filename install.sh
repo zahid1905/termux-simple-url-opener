@@ -8,6 +8,9 @@ pkg upgrade -y
 echo -e "Solicitando permiso de almacenamiento\n"
 termux-setup-storage
 sleep 5
+
+echo -e "Creando el folder Downloads/TermuxDownloads\n"
+mkdir ~/storage/downloads/TermuxDownloads
  
 echo -e "Instalando Python\n"
 pkg install python python-pip ffmpeg --no-install-recommends
@@ -27,5 +30,5 @@ chmod +x ~/bin/termux-url-opener
 
 echo -e "\n"
 echo -e "\n"
-echo -e "Los archivos descargados pueden ser encontrados en la carpeta TermuxDownloads\n"
+echo -e "Los archivos descargados pueden ser encontrados en la carpeta Downloads\TermuxDownloads\n"
 echo -e "\n"
