@@ -11,7 +11,7 @@ echo "3: Descargar video de YouTube (mejor calidad)[yt-dlp]"
 echo "4: Descargar video de YouTube (1080p)[yt-dlp]"
 echo "5: Descargar otros archivos [wget]"
 
-yt_command='-no-mtime -o ~/storage/downloads/%(title)s.%(ext)s'
+yt_command='-no-mtime -o ~/storage/downloads/TermuxDownloads/%(title)s.%(ext)s'
 read option
 
 if [ "$option" -eq "1" ]
@@ -32,5 +32,5 @@ then
 
 elif [ "$option" -eq "5" ]
 then
-    wget -P "~/storage/downloads/" $url
+    curl $url --output-dir "~/storage/downloads/TermuxDownloads" 
 fi
