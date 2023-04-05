@@ -32,5 +32,5 @@ then
 
 elif [ "$option" -eq "5" ]
 then
-    curl $url --output-dir "~/storage/downloads/TermuxDownloads" 
+    wget $url -P "~/storage/downloads/TermuxDownloads" 
 fi
