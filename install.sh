@@ -13,7 +13,7 @@ echo -e "Creando el folder Downloads/TermuxDownloads\n"
 mkdir ~/storage/downloads/TermuxDownloads
  
 echo -e "Instalando Python\n"
-pkg install python python-pip ffmpeg --no-install-recommends
+pkg install wget python python-pip ffmpeg --no-install-recommends
 
 echo -e "Actualizando pip\n"
 pip install pip --upgrade
@@ -25,7 +25,7 @@ echo -e "Creando el folder bin\n"
 mkdir ~/bin
  
 echo -e "Descargando e installando termux-url-opener\n"
-curl "https://raw.githubusercontent.com/zahid1905/termux-simple-url-opener/main/termux-url-opener" -o ~/bin/termux-url-opener
+wget "https://raw.githubusercontent.com/zahid1905/termux-simple-url-opener/main/termux-url-opener" -o ~/bin/termux-url-opener
 chmod +x ~/bin/termux-url-opener
 
 echo -e "\n"
