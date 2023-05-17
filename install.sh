@@ -15,9 +15,6 @@ mkdir ~/storage/downloads/TermuxDownloads
 echo -e "Instalando Python\n"
 pkg install wget python python-pip ffmpeg --no-install-recommends
 
-echo -e "Actualizando pip\n"
-pip install pip --upgrade
-
 echo -e "Instalando yt-dlp\n"
 pip install yt-dlp
  
